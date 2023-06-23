@@ -15,7 +15,7 @@ from models.perceptual_model import PerceptualModel
 import sys
 # add path of styleGAN repo
 
-stylegan2_path = r'/home/adityanigam/abhishek/gans/running_tediGAN/styleGAN2'
+stylegan2_path = r'/content/running_tediGAN/styleGAN2'
 sys.path.append(stylegan2_path)
 
 import generate
@@ -23,9 +23,8 @@ import projector
 
 __all__ = ['StyleGANInverter']
 
-network_path= "/home/adityanigam/abhishek/gans/stylegan2-ada-pytorch/training-runs/00005-dataset_256-auto1-gamma10-kimg25000/network-snapshot-018200.pkl"
-out_dir = "/home/adityanigam/abhishek/gans/running_tediGAN/out"
-
+network_path= "/content/gdrive/MyDrive/running_tediGAN/models/network-snapshot-000500.pkl"
+out_dir = "/content/running_tediGAN/out"
 def _softplus(x):
   """Implements the softplus function."""
   return torch.nn.functional.softplus(x, beta=1, threshold=10000)

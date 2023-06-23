@@ -57,15 +57,15 @@ def project(
     # Setup noise inputs.
     noise_bufs = { name: buf for (name, buf) in G.synthesis.named_buffers() if 'noise_const' in name }
 
-    vgg16_path = "/home/adityanigam/abhishek/gans/running_tediGAN/vgg16/vgg16.pt"
-    # print('--VGG-16--')
-    vgg16 = torch.jit.load(vgg16_path).eval().to(device)
+    # vgg16_path = "/home/adityanigam/abhishek/gans/running_tediGAN/vgg16/vgg16.pt"
+    # # print('--VGG-16--')
+    # vgg16 = torch.jit.load(vgg16_path).eval().to(device)
     # print('--Model Loaded--')
 
     # Load VGG16 feature detector.
-    # url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'
-    # with dnnlib.util.open_url(url) as f:
-    #     vgg16 = torch.jit.load(f).eval().to(device)
+    url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'
+    with dnnlib.util.open_url(url) as f:
+        vgg16 = torch.jit.load(f).eval().to(device)
 
     # Features for target image.
     target_images = target.unsqueeze(0).to(device).to(torch.float32)
