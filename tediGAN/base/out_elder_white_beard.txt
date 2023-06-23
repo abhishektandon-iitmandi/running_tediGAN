@@ -1,0 +1,15 @@
+models/pretrain/vgg16.pth
+[2023-05-23 05:47:03,395][INFO] Build network for module `generator` in model `styleganinv_ffhq256`.
+[2023-05-23 05:47:03,541][WARNING] No pre-trained weights will be loaded!
+[2023-05-23 05:47:03,587][INFO] Current `lod` is 0.0.
+[2023-05-23 05:47:03,587][INFO] Build network for module `encoder` in model `styleganinv_ffhq256`.
+[2023-05-23 05:47:04,452][INFO] Loading pytorch weights from `models/pretrain/styleganinv_ffhq256_encoder.pth`.
+[2023-05-23 05:47:05,011][INFO] Successfully loaded!
+Loading networks from "/home/adityanigam/abhishek/gans/stylegan2-ada-pytorch/training-runs/00005-dataset_256-auto1-gamma10-kimg25000/network-snapshot-018200.pkl"...
+targ_uint8 shape is - (256, 256, 3)
+target shape is - torch.Size([3, 256, 256])
+Computing W midpoint and stddev using 10000 samples...
+--VGG-16--
+--Model Loaded--
+Elapsed: 80.2 s
+(1, 14, 512)
